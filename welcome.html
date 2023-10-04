@@ -1,0 +1,100 @@
+<html>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        input{
+            background-color: white;
+            border-radius: 5px;
+            height: 25px;
+        }
+        body {
+            background-image: url("logo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #form {
+            background-color: lightgray;
+            text-align: center;
+            width: 400px;
+            margin: 0 auto;
+            float: left;
+        }
+        input[type=submit]{
+            background-color: green;
+        }
+        input[type=reset]{
+            background-color: red;
+        }
+    </style>
+    <head>
+
+    </head>
+
+    <body>
+        <div id="leftcontent">
+            <ul>
+              <li><a href="login.html" class="w3-bar-item w3-button w3-padding-small">Get started</a></li>
+              <li><a href="#" class="w3-bar-item w3-button w3-padding-small">Login</a></li>
+              <li><a href="#" class="w3-bar-item w3-button w3-padding-small">Contact</a></li>
+              <li><a href="#" class="w3-bar-item w3-button w3-padding-small">About</a></li>
+            </ul>
+          </div>
+    </body>
+    <script>
+        function loginpage() {
+
+        }
+    </script>
+    <form id = "form" action = "#" method = "post" name = "myForm" onsubmit="return validate()">
+        <label for="my_email">Email:</label><input type="email" name = "my_email" id = "my_email" placeholder = "Enter your email address"><br>
+        <label for="fname">First name:</label><input type="text" name = "fname" id = "fname" placeholder = "first name"><br>
+        <label for="my_lname">Last name:</label><input type="text" name = "my_lname" id = "my_lname" placeholder = "last name"><br>
+        <label for="my_zip">Zip:</label><input type="number" name = "my_zip" id = "my_zip" placeholder = "zip code"><br>
+        <label for="my_phone">Phone:</label><input type="tel" name = "my_phone" id = "my_phone" placeholder = "phone number"><br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script>
+        function validate() {
+            var phoneNumberPattern = /^\d{10}$/;
+            var zipPattern = /^\d{5}$/;
+            //First name check
+            if (document.forms["myForm"]["fname"].value == "") {
+                alert("Please provide a first name!!!");
+                document.myForm.fname.focus();
+                return false;
+            }
+            //Last name check
+            if (document.myForm.my_lname.value == "") {
+                alert("Please provide a last name!!!");
+                document.myForm.fname.focus();
+                return false;
+            }
+            //Zip code stuff
+            if (document.myForm.my_zip.value == "") {
+                alert("Please provide a zip code!!!");
+                document.myForm.my_zip.focus();
+            
+                return false;
+            }
+            if (!(document.myForm.my_zip.value.match(zipPattern))) {
+                alert("Please provide a valid 5-digit zip!");
+                document.myForm.my_phone.focus();
+                return false;
+            }
+            //Phone number stuff
+            if (document.myForm.my_phone.value == "") {
+                alert("Please provide a Phone number!!!");
+                document.myForm.my_phone.focus();
+                return false;
+            }
+            if (!(document.myForm.my_phone.value.match(phoneNumberPattern))) {
+                alert("Please provide a valid 10-digit phone number!");
+                document.myForm.my_phone.focus();
+                return false;
+            }
+
+            return (true);
+		}
+    </script>
+</html>
