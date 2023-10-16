@@ -1,0 +1,10 @@
+InventoryStatus,customer_id,customer_name,stock_date,sell_date,reason
+1,1,Bob,2023-10-01,2023-10-15,
+1,2,Ryan,2023-10-02,2023-10-14,
+0,3,Joe,2023-10-03,2023-10-20,
+1,4,Ceno,2023-10-05,2023-10-15,
+0,5,Billy,2023-10-07,2023-10-16,Out of stock
+0,2,Ryan,2023-10-02,2023-10-20,Stuff
+1,6,Hanzo,2023-10-07,2023-10-16,
+0,7,Quandile,2023-10-07,2023-10-16,
+1,8,Devious John,2023-10-07,2023-10-16,

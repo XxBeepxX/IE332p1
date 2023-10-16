@@ -1,0 +1,10 @@
+OrderedStatus,customer_id,customer_name,stock_date,sell_date,return_reason
+1,1,Alice,2023-10-10,2023-10-20,Out of stock
+1,2,Brian,2023-10-12,2023-10-22,Smelly
+0,3,Charlie,2023-10-15,2023-10-25,
+1,4,David,2023-10-18,2023-10-28,Stinky
+0,5,Eva,2023-10-21,2023-10-31,
+0,6,Frank,2023-10-24,2023-11-03,
+1,7,Gloria,2023-10-27,2023-11-06,Gross
+0,8,Henry,2023-10-30,2023-11-09,
+1,9,Isabel,2023-11-02,2023-11-12,
